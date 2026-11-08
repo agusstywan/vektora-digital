@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ArrowUpRight, Check, Minus, Mail, MessageCircle, Sparkles, MoveUpRight, Image as ImageIcon, Zap } from "lucide-react";
-import studioImage from "@/assets/vektora-studio.jpg";
+import { ArrowUpRight, Check, Minus, Mail, MessageCircle, Sparkles, Image as ImageIcon, Zap } from "lucide-react";
 import { CtaButton } from "./Layout";
-import { SERVICES, PACKAGES, packageWa, WORKS, PROCESS, CONTACT_WA, EMAIL, WA_DISPLAY, WA_NUMBER } from "@/lib/site-data";
+import { SERVICES, PACKAGES, packageWa, serviceWa, WORKS, PROCESS, CONTACT_WA, EMAIL, WA_DISPLAY, WA_NUMBER } from "@/lib/site-data";
 
 const wrap = "mx-auto max-w-[1280px] px-5 md:px-8";
 
@@ -46,9 +45,10 @@ export function Hero() {
           </div>
         </div>
         <div className="relative mx-auto w-full max-w-[590px] md:pl-3">
-          <div className="absolute -right-5 -top-7 h-36 w-36 rounded-full bg-blue-100/70 blur-3xl" />
-          <div className="relative overflow-hidden rounded-2xl border border-white bg-white p-2 shadow-[0_28px_80px_rgba(28,55,110,0.15)]">
-            <img src={studioImage} alt="Vektora Digital creative studio" className="aspect-[1.12/1] w-full rounded-xl object-cover" />
+          <div className="relative overflow-hidden rounded-2xl border border-blue-100 bg-[linear-gradient(160deg,#eaf0ff_0%,#ffffff_75%)] p-2 shadow-[0_28px_80px_rgba(28,55,110,0.15)]">
+            <div className="px-3 pb-28 pt-6">
+              <img src="/images/hero/laptop-hp.webp" alt="Tampilan website dan aplikasi di laptop dan HP" className="h-auto w-full drop-shadow-[0_18px_28px_rgba(23,43,87,0.22)]" />
+            </div>
             <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between rounded-xl border border-white/70 bg-white/95 p-4 shadow-lg backdrop-blur">
               <div>
                 <p className="eyebrow text-primary">VEKTORA DIGITAL</p>
@@ -57,7 +57,6 @@ export function Hero() {
               <span className="flex size-10 items-center justify-center rounded-lg bg-primary text-white"><ArrowUpRight className="size-5" /></span>
             </div>
           </div>
-          <div className="absolute -bottom-5 -left-4 -z-0 h-24 w-24 rounded-2xl border border-blue-100 bg-blue-50" />
         </div>
       </div>
     </section>
@@ -88,7 +87,12 @@ export function Services({ asPage = false }: { asPage?: boolean }) {
             </div>
             <h3 className="mt-7 text-xl font-bold tracking-tight">{s.title}</h3>
             <p className="mt-3 text-sm leading-7 text-muted-foreground">{s.desc}</p>
-            <MoveUpRight className="absolute bottom-7 right-7 size-4 text-primary opacity-0 transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:opacity-100" />
+            <div className="mt-auto pt-6">
+              <a href={serviceWa(s.title)} target="_blank" rel="noopener noreferrer"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-3 text-sm font-bold text-white transition-colors hover:bg-[#1948bf] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2">
+                <MessageCircle className="size-4" aria-hidden /> Konsultasi <span className="sr-only">tentang {s.title} via WhatsApp (membuka tab baru)</span>
+              </a>
+            </div>
           </article>
         ))}
       </div>
