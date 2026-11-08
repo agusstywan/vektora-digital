@@ -23,32 +23,32 @@ export const SERVICES = [
   {
     title: "Brand Identity & Logo Design",
     desc: "Logo, palet warna, tipografi, dan panduan visual yang membuat brand mudah dikenali dan konsisten di setiap titik.",
-    // GANTI GAMBAR: taruh file di folder public/images/layanan/ lalu isi path-nya (rekomendasi rasio 4:3, ±800×600 px)
-    image: "" as string, // contoh: "/images/layanan/brand-identity.jpg"
+    // GANTI GAMBAR: taruh file di folder public/images/layanan/ lalu isi path-nya (rekomendasi rasio 7:5, ±1400×1000 px)
+    image: "/images/layanan/brand-identity.jpg" as string,
   },
   {
     title: "Social Media & Campaign Design",
     desc: "Desain konten dan materi kampanye yang rapi, selaras dengan karakter brand, dan siap tampil di media sosial.",
-    // GANTI GAMBAR: taruh file di folder public/images/layanan/ lalu isi path-nya (rekomendasi rasio 4:3, ±800×600 px)
-    image: "" as string, // contoh: "/images/layanan/social-media.jpg"
+    // GANTI GAMBAR: taruh file di folder public/images/layanan/ lalu isi path-nya (rekomendasi rasio 7:5, ±1400×1000 px)
+    image: "/images/layanan/social-media.jpg" as string,
   },
   {
     title: "Business Branding Kit",
     desc: "Katalog, company profile, dan kartu nama yang menghadirkan kesan profesional saat brand bertemu calon pelanggan.",
-    // GANTI GAMBAR: taruh file di folder public/images/layanan/ lalu isi path-nya (rekomendasi rasio 4:3, ±800×600 px)
-    image: "" as string, // contoh: "/images/layanan/branding-kit.jpg"
+    // GANTI GAMBAR: taruh file di folder public/images/layanan/ lalu isi path-nya (rekomendasi rasio 7:5, ±1400×1000 px)
+    image: "/images/layanan/branding-kit.jpg" as string,
   },
   {
     title: "Website & Landing Page",
     desc: "Website responsif dan landing page yang jelas, cepat, dan dirancang untuk mengarahkan pengunjung mengambil tindakan.",
-    // GANTI GAMBAR: taruh file di folder public/images/layanan/ lalu isi path-nya (rekomendasi rasio 4:3, ±800×600 px)
-    image: "" as string, // contoh: "/images/layanan/website.jpg"
+    // GANTI GAMBAR: taruh file di folder public/images/layanan/ lalu isi path-nya (rekomendasi rasio 7:5, ±1400×1000 px)
+    image: "/images/layanan/website.jpg" as string,
   },
   {
     title: "E-Commerce & Digital Solutions",
     desc: "Solusi digital untuk membantu bisnis berjualan dan melayani pelanggan secara online dengan lebih tertata.",
-    // GANTI GAMBAR: taruh file di folder public/images/layanan/ lalu isi path-nya (rekomendasi rasio 4:3, ±800×600 px)
-    image: "" as string, // contoh: "/images/layanan/e-commerce.jpg"
+    // GANTI GAMBAR: taruh file di folder public/images/layanan/ lalu isi path-nya (rekomendasi rasio 7:5, ±1400×1000 px)
+    image: "/images/layanan/e-commerce.jpg" as string,
   },
 ];
 
