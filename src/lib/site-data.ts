@@ -9,6 +9,9 @@ export const waLink = (message: string) =>
 
 export const CONTACT_WA = waLink(CONTACT_MESSAGE);
 
+export const serviceWa = (title: string) =>
+  waLink(`Halo Vektora Digital, saya tertarik untuk berkonsultasi mengenai layanan ${title}. Bisa saya mendapatkan informasi lebih lanjut?`);
+
 export const NAV = [
   { to: "/", label: "Home" },
   { to: "/layanan", label: "Layanan" },
