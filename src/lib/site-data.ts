@@ -123,13 +123,19 @@ export const packageWa = (p: Pkg) =>
     `Halo Vektora Digital, saya tertarik dengan Paket Website ${p.name} (mulai ${p.price}). Bisa saya mendapatkan informasi lebih lanjut?`,
   );
 
-export const WORKS = [
-  { name: "Inclowd Apparel", url: "http://gawekaos.my.id/", cat: "Apparel & Custom Clothing" },
-  { name: "Jasa Cleaning Jogja", url: "http://jasacleaningjogja.my.id/", cat: "Cleaning Service" },
-  { name: "Jumain Coffee", url: "http://jumaincoffee.netlify.app/", cat: "Food & Beverage" },
-  { name: "Sneakers Wash", url: "http://sneakerswash.netlify.app/", cat: "Sneaker Care" },
-  { name: "Risol Aleyda", url: "http://risol-aleyda.vercel.app/", cat: "Food Business" },
+// Logo: taruh file di public/images/karya/ lalu isi path-nya. bg = warna latar kotak logo (samakan dengan warna tepi logo).
+export type Work = { name: string; url: string; cat: string; logo?: string; bg?: string };
+
+export const WORKS: Work[] = [
+  { name: "Inclowd Apparel", url: "http://gawekaos.my.id/", cat: "Apparel & Custom Clothing", logo: "/images/karya/inclowd-apparel.jpg", bg: "#fefefe" },
+  { name: "Jasa Cleaning Jogja", url: "http://jasacleaningjogja.my.id/", cat: "Cleaning Service", logo: "/images/karya/jasa-cleaning-jogja.jpg", bg: "#ffffff" },
+  { name: "Jumain Coffee", url: "http://jumaincoffee.netlify.app/", cat: "Food & Beverage", logo: "/images/karya/jumain-coffee.jpg", bg: "#020200" },
+  { name: "Sneakers Wash", url: "http://sneakerswash.netlify.app/", cat: "Sneaker Care", logo: "/images/karya/sneakers-wash.jpg", bg: "#ffffff" },
+  { name: "Risol Aleyda", url: "http://risol-aleyda.vercel.app/", cat: "Food Business", logo: "/images/karya/risol-aleyda.jpg", bg: "#bc5532" },
   { name: "Papatwin Grup", url: "https://www.instagram.com/rotibakar_papatwin/", cat: "Food & Beverage" },
+  { name: "Merahputih Transport & Tour", url: "https://merahputihtour.vercel.app", cat: "Transport & Tour", logo: "/images/karya/merahputih-transport-tour.jpg", bg: "#fdfdfd" },
+  { name: "Tulada Institute", url: "https://tuladainstitute.com", cat: "Training & Institute", logo: "/images/karya/tulada-institute.jpg", bg: "#d30000" },
+  { name: "Kedainya Ros", url: "https://www.instagram.com/kedainyaros", cat: "Food & Beverage", logo: "/images/karya/kedainya-ros.jpg", bg: "#ffffff" },
 ];
 
 export const PROCESS = [
