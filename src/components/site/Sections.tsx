@@ -153,12 +153,20 @@ export function Works({ asPage = false }: { asPage?: boolean }) {
         {WORKS.map((w, i) => (
           <li key={w.name}>
             <a href={w.url} target="_blank" rel="noopener noreferrer" className="group block overflow-hidden rounded-xl border border-border bg-white transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_18px_40px_rgba(26,55,110,0.09)]">
-              <div className={`relative flex aspect-[4/3] items-end overflow-hidden p-6 ${i % 3 === 1 ? "bg-[#172b57] text-white" : i % 3 === 2 ? "bg-[#eaf0ff] text-[#172033]" : "bg-[#f1f4f9] text-[#172033]"}`}>
-                <div className="absolute inset-0 opacity-50" style={{ backgroundImage: "radial-gradient(circle at 80% 15%, rgba(36,87,214,.18), transparent 40%), linear-gradient(135deg, transparent 55%, rgba(36,87,214,.08))" }} />
-                <span className="absolute right-5 top-4 text-xs font-bold text-primary/60">0{i + 1}</span>
-                <span className="relative display max-w-[10ch] text-[clamp(1.8rem,3.5vw,2.8rem)] transition-transform duration-500 group-hover:-translate-y-1">{w.name}</span>
-                <ArrowUpRight className="absolute bottom-6 right-6 size-5 text-primary transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" aria-hidden />
-              </div>
+              {w.logo ? (
+                <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden" style={{ backgroundColor: w.bg ?? "#ffffff" }}>
+                  <img src={w.logo} alt={`Logo ${w.name}`} loading="lazy" className="size-full object-contain p-3 transition-transform duration-500 group-hover:scale-105" />
+                  <span className="absolute left-4 top-3 rounded-full bg-white/85 px-2 py-0.5 text-[10px] font-bold text-primary">0{i + 1}</span>
+                  <span className="absolute bottom-4 right-4 flex size-9 items-center justify-center rounded-full bg-white/90 text-primary shadow-sm"><ArrowUpRight className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden /></span>
+                </div>
+              ) : (
+                <div className={`relative flex aspect-[4/3] items-end overflow-hidden p-6 ${i % 3 === 1 ? "bg-[#172b57] text-white" : i % 3 === 2 ? "bg-[#eaf0ff] text-[#172033]" : "bg-[#f1f4f9] text-[#172033]"}`}>
+                  <div className="absolute inset-0 opacity-50" style={{ backgroundImage: "radial-gradient(circle at 80% 15%, rgba(36,87,214,.18), transparent 40%), linear-gradient(135deg, transparent 55%, rgba(36,87,214,.08))" }} />
+                  <span className="absolute right-5 top-4 text-xs font-bold text-primary/60">0{i + 1}</span>
+                  <span className="relative display max-w-[10ch] text-[clamp(1.8rem,3.5vw,2.8rem)] transition-transform duration-500 group-hover:-translate-y-1">{w.name}</span>
+                  <ArrowUpRight className="absolute bottom-6 right-6 size-5 text-primary transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" aria-hidden />
+                </div>
+              )}
               <div className="flex items-center justify-between gap-4 px-5 py-4">
                 <div>
                   <h3 className="font-bold">{w.name}</h3>
