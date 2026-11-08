@@ -71,14 +71,14 @@ export function Services({ asPage = false }: { asPage?: boolean }) {
       <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {SERVICES.map((s, i) => (
           <article key={s.title} className="group relative flex flex-col rounded-xl border border-border bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_18px_40px_rgba(26,55,110,0.08)] md:p-7">
-            <div className="-mx-1 -mt-1 mb-6 aspect-[4/3] overflow-hidden rounded-lg border border-border bg-blue-50/60">
+            <div className="-mx-1 -mt-1 mb-6 aspect-[7/5] overflow-hidden rounded-lg border border-border bg-blue-50/60">
               {s.image ? (
                 <img src={s.image} alt={s.title} loading="lazy" className="size-full object-cover" />
               ) : (
                 <div data-image-slot className="flex size-full flex-col items-center justify-center gap-2 border-2 border-dashed border-blue-200 p-4 text-center text-primary">
                   <ImageIcon className="size-6" />
                   <span className="text-xs font-semibold uppercase tracking-[0.14em]">Posisi gambar {i + 1}</span>
-                  <span className="text-[11px] text-muted-foreground">Rasio 4:3 · ±800×600 px</span>
+                  <span className="text-[11px] text-muted-foreground">Rasio 7:5 · ±1400×1000 px</span>
                 </div>
               )}
             </div>
